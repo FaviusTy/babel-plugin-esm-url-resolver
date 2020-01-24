@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-esm-url-resolver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "favi_ty <favius983@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.8.3",
+    "babel-jest": "25.1.0",
+    "babel-plugin-tester": "^8.0.1",
+    "babel-preset-power-assert": "3.0.0",
+    "jest": "25.1.0",
+    "power-assert": "1.6.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
