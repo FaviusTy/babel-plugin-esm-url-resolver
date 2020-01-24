@@ -1,6 +1,6 @@
 const { extname } = require("path");
 
-module.exports = ({ types: t }, options = {}) => {
+module.exports = ({ types: t }) => {
   return {
     name: "esm-url-resolver",
     visitor: {
