@@ -1,13 +1,13 @@
 {
-  "name": "babel-plugin-esm-url-resolver",
+  "name": "@favi_ty/babel-plugin-esm-url-resolver",
   "version": "1.0.0",
   "main": "index.js",
   "author": "favi_ty <favius983@gmail.com>",
-  "license": "MIT",
+  "license": "WTFPL",
   "devDependencies": {
     "@babel/core": "7.8.3",
     "babel-jest": "25.1.0",
-    "babel-plugin-tester": "^8.0.1",
+    "babel-plugin-tester": "8.0.1",
     "babel-preset-power-assert": "3.0.0",
     "common-tags": "1.8.0",
     "jest": "25.1.0",
@@ -15,5 +15,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
