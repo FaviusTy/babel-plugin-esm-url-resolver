@@ -1,13 +1,13 @@
-const { transform } = require("@babel/core");
+const { extname } = require("path");
 
-module.exports = (babel, options) => {
-  console.log(babel);
-  console.log(options);
+module.exports = ({ types: t }, options = {}) => {
   return {
     name: "esm-url-resolver",
     visitor: {
       ImportDeclaration(path, state) {
-        console.log(path.node.source);
+        const srcPath = path.node.source.value;
+        if (srcPath[0] !== "." || extname(srcPath) !== "") return;
+        path.node.source = t.stringLiteral(`${srcPath}.js`);
       }
     }
   };
