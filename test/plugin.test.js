@@ -14,6 +14,8 @@ pluginTester({
         import def, { sub1, sub2 } from "./module5/index";
         import lib from "lib";
         import { Component, render } from "https://cdn.pika.dev/preact/v8";
+
+        const module = import("./lazy-module");
       `,
       output: stripIndent`
         import * as source1 from "./module1.js";
@@ -23,6 +25,8 @@ pluginTester({
         import def, { sub1, sub2 } from "./module5/index.js";
         import lib from "lib";
         import { Component, render } from "https://cdn.pika.dev/preact/v8";
+
+        const module = import("./lazy-module");
       `
     }
   ]
