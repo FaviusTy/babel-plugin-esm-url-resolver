@@ -17,7 +17,6 @@ module.exports = ({ types: t }) => {
       CallExpression(path) {
         if (!t.isImport(path.node.callee)) return;
         const srcPath = path.node.arguments[0].value;
-        console.log(srcPath);
         if (!isLocalModulePath(srcPath)) return;
         path.node.arguments = [t.stringLiteral(`${srcPath}.js`)];
       }
