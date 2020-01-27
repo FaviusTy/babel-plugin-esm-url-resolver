@@ -1,5 +1,11 @@
 # @favi_ty/babel-plugin-esm-url-resolver
 
+add the `js` extension so that the import path can be executed as a URL
+
+- only transpiling relative path. (may be only your repository sources)
+- if the path already has an extensions, do nothing.
+- if you importing `index` files, it must be specified `/index` in the path strings.
+
 # Installation
 
 ```
@@ -24,10 +30,30 @@ import * as src from "./module1";
 import * as src from "./module1.js";
 ```
 
-# Feature
+# Options
 
-add the `js` extension so that the import path can be executed as a URL
+## dirs?: String[]
 
-- only transpiling relative path. (may be only your repository sources)
-- if the path already has an extensions, do nothing.
-- if you importing `index` files, it must be specified `/index` in the path strings.
+include the path that starts with one of the values in the transformation target
+
+```json
+{
+  "dirs": ["/src"]
+}
+```
+
+in:
+
+```js
+import lib from "/src/lib";
+import lib2 from "/src/node/lib2";
+import lib3 from "src/node/lib3"; // that's not transform!
+```
+
+out:
+
+```js
+import lib.js from "/src/lib";
+import lib2.js from "/src/node/lib2";
+import lib3 from "src/node/lib3"; // that's not transform!
+```
