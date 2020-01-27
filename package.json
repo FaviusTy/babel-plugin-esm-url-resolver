@@ -1,6 +1,6 @@
 {
   "name": "@favi_ty/babel-plugin-esm-url-resolver",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "index.js",
   "author": "favi_ty <favius983@gmail.com>",
   "license": "WTFPL",
