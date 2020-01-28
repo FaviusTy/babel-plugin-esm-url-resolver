@@ -3,7 +3,7 @@ const { extname } = require("path");
 function isExcludePath(srcPath, dirs) {
   if (extname(srcPath) !== "") return true;
   if (srcPath[0] === ".") return false;
-  if (dirs.findIndex(dir => srcPath.startsWith(dir)) !== -1) return false;
+  if (dirs.findIndex(dir => srcPath.startsWith(`${dir}/`)) !== -1) return false;
   return true;
 }
 

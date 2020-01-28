@@ -9,4 +9,6 @@ import lib1 from "/src/lib.js";
 import lib2 from "/src/node/lib2.js";
 import lib3 from "src/node/lib3"; // that's not transform!
 
+import src from "/srcYakisoba"; // that's not transform!
+
 const lazyLib = import("/src/lib.js");
