@@ -53,7 +53,7 @@ import lib3 from "src/node/lib3"; // that's not transform!
 out:
 
 ```js
-import lib.js from "/src/lib";
-import lib2.js from "/src/node/lib2";
+import lib from "/src/lib.js";
+import lib2 from "/src/node/lib2.js";
 import lib3 from "src/node/lib3"; // that's not transform!
 ```
