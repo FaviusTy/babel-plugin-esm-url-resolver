@@ -6,3 +6,5 @@ import def, { sub1, sub2 } from "./module5/index";
 import lib from "lib";
 import { Component, render } from "https://cdn.pika.dev/preact/v8";
 const module = import("./lazy-module");
+export { default as module6, sub3 } from "./module6";
+export * from "./module7";
