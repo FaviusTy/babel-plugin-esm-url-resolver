@@ -8,3 +8,6 @@ import { Component, render } from "https://cdn.pika.dev/preact/v8";
 const module = import("./lazy-module.js");
 export { default as module6, sub3 } from "./module6.js";
 export * from "./module7.js";
+export const a = "a";
+export function b() {}
+export default "";

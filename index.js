@@ -22,7 +22,7 @@ module.exports = ({ types: t }, { dirs = [] } = {}) => {
         path.node.source = t.stringLiteral(`${srcPath}.js`);
       },
       ExportNamedDeclaration(path) {
-        const srcPath = path.node.source.value;
+        const srcPath = path.node.source ? path.node.source.value : null;
         if (!srcPath || isExcludePath(srcPath, dirs)) return;
         path.node.source = t.stringLiteral(`${srcPath}.js`);
       },
