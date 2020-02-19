@@ -16,7 +16,16 @@ module.exports = ({ types: t }, { dirs = [] } = {}) => {
         if (isExcludePath(srcPath, dirs)) return;
         path.node.source = t.stringLiteral(`${srcPath}.js`);
       },
-
+      ExportAllDeclaration(path) {
+        const srcPath = path.node.source.value;
+        if (isExcludePath(srcPath, dirs)) return;
+        path.node.source = t.stringLiteral(`${srcPath}.js`);
+      },
+      ExportNamedDeclaration(path) {
+        const srcPath = path.node.source.value;
+        if (!srcPath || isExcludePath(srcPath, dirs)) return;
+        path.node.source = t.stringLiteral(`${srcPath}.js`);
+      },
       CallExpression(path) {
         if (!t.isImport(path.node.callee)) return;
         const srcPath = path.node.arguments[0].value;
