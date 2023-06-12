@@ -11,7 +11,7 @@
     "babel-preset-power-assert": "3.0.0",
     "common-tags": "1.8.0",
     "jest": "25.1.0",
-    "np": "6.1.0",
+    "np": "8.0.4",
     "power-assert": "1.6.1"
   },
   "scripts": {
