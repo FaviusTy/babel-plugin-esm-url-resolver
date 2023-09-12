@@ -6,11 +6,11 @@
   "license": "WTFPL",
   "devDependencies": {
     "@babel/core": "7.8.4",
-    "babel-jest": "25.1.0",
+    "babel-jest": "29.7.0",
     "babel-plugin-tester": "8.0.1",
     "babel-preset-power-assert": "3.0.0",
     "common-tags": "1.8.0",
-    "jest": "25.1.0",
+    "jest": "29.7.0",
     "np": "6.1.0",
     "power-assert": "1.6.1"
   },
